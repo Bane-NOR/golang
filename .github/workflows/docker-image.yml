@@ -44,4 +44,4 @@ jobs:
         esac
 
     - name: Build and Push
-      run: docker buildx build --build-arg ALPINE_VERSION=${{ matrix.version }} --platform linux/amd64 -t "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.map.outputs.tag }}" --push -f Dockerfile .
+      run: docker buildx build --build-arg GOLANG_VERSION=${{ matrix.version }} --platform linux/amd64 -t "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.map.outputs.tag }}" --push -f Dockerfile .
