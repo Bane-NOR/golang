@@ -1,0 +1,7 @@
+ARG GOLANG_VERSION
+
+FROM golang:1.24.0
+
+RUN apt update && \
+    apt upgrade -y && \
+    apt clean 
