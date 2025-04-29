@@ -40,7 +40,7 @@ jobs:
         case "${{ matrix.version }}" in
           "1.23.5") echo "tag=1.23.5" >> $GITHUB_OUTPUT ;;
           "1.24.0") echo "tag="1.24.0" >> $GITHUB_OUTPUT ;;
-          "latest") echo "tag=latest" >> $GITHUB_OUTPUT ;;
+          "latest") echo "tag="latest" >> $GITHUB_OUTPUT ;;
         esac
 
     - name: Build and Push
