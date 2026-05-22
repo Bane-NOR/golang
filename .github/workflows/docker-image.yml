@@ -16,7 +16,7 @@ jobs:
   build:
     strategy:
       matrix:
-        version: [1.23.5-alpine,1.24-alpine,1.25.6-alpine,latest]
+        version: [1.23.5-alpine,1.24-alpine,1.25.6-alpine,1.26.3-alpine,latest]
 
     runs-on: ubuntu-latest
     steps:
@@ -41,6 +41,7 @@ jobs:
           "1.23.5-alpine") echo "tag=1.23.5" >> $GITHUB_OUTPUT ;;
           "1.24-alpine") echo "tag=1.24" >> $GITHUB_OUTPUT ;;
           "1.25.6-alpine") echo "tag=1.25.6" >> $GITHUB_OUTPUT ;;
+          "1.26.3-alpine") echo "tag=1.26.3" >> $GITHUB_OUTPUT ;;
           "latest") echo "tag=latest" >> $GITHUB_OUTPUT ;;
         esac
 
